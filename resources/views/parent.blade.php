@@ -9,16 +9,20 @@
         <!-- CSS -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/parent.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/index.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/burbujas.css') }}" rel="stylesheet" type="text/css">
+
+
 
 
     </head>
     <body>
         <header>
             <div class="header-menu-l">
-                <input type="button" class="btn text-light" id="button-r" value="HOME"></div>
+                <a href="{{('/')}}"><input type="button" class="btn text-light" id="button-r" value="HOME"></div></a>
             </div>
             <div class="header-logue">
-                <a href="#Index" id="logue">LinUO</a>
+                <a href="{{('/')}}"><img src="{{asset('images/logo/LinUO.png')}}" id="logue" alt="Logotipo de LinUO"></img></a>
             </div>
             <div class="header-menu-r">
                 <input type="button" class="btn text-light" id="button-l" value="CONTÁCTANOS"></div>

@@ -42,9 +42,8 @@ class LinkedinImport implements ShouldQueue
             if($http_response->successful()){
                 $response_data = $http_response->object();
                 //TODO gestionar los datos recibidos
-            }else{
-                //TODO crear un log de errores
             }
+            //mas un dia
             DB::update("UPDATE cron_jobs SET last_update = ? WHERE id = ?", [(new DateTime())->getTimestamp() ,$job->id]);
         }
     }
