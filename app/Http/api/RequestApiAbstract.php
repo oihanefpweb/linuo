@@ -14,7 +14,7 @@ class RequestApiAbstract{
     private $api_token;
 
     public function __construct(){
-        $this->api_token = env("LINKEDIN-API-TOKEN");
+        $this->api_token = env("LINKEDIN_API_TOKEN");
     }
 
     public function request($request_type, $url, $headers = array(), $data = array()) : ?Response {

@@ -27,7 +27,11 @@
         <div  class="content">
             @yield('content')
         </div>
-        <footer></footer>
+        <footer>
+                <div class="us">
+                    <p>UNAI & OIHANE</p>
+                </div>
+        </footer>
         
         <!-- JS (jquery and bootstrap)-->
         <script src="{{ asset('js/app.js') }}"></script>
