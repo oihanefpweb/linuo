@@ -39,5 +39,7 @@
         
         <!-- JS (jquery and bootstrap)-->
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/index.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
     </body>
 </html>
