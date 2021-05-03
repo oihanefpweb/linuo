@@ -5,7 +5,7 @@
   }
 
 body{
-    background-color: midnightblue;
+   background-color: #3490dc;;
 }    
 header{
     font-family: 'Comfortaa';
@@ -16,6 +16,7 @@ header{
     text-align: center;
     top: 0;
     position:fixed;
+    z-index: 20;
     
 }
 .header-logue{

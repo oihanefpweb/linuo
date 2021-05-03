@@ -41,5 +41,7 @@
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/index.js') }}"></script>
         <script src="https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     </body>
 </html>
