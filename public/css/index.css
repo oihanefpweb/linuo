@@ -7,7 +7,6 @@
 .section1{
   position: relative;
   width: 100%;
-  height: 200vh;
 }
 .section1 .slogan-content{
   width: 100%;
@@ -29,7 +28,7 @@
   text-transform: none;
   color: aliceblue;
 }
-.section1 iframe{
+.linkedin-video iframe{
   width: 535px;
   height: 400px !important;
   height: auto;
@@ -40,7 +39,8 @@
   box-shadow: inset 0 0 12px 4px rgba(0, 0, 0, 0.8);
   pointer-events: none;
 }
-.section1 .linkedin-video{
+.linkedin-video{
+    display: none;
     border:solid 1px #999;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     width:360px;
@@ -56,32 +56,30 @@
 .section2{
   position: relative;
   width: 100%;
-  margin-top: 100vh;
   z-index: 13; 
-  background-color: #153144;
-  -webkit-box-shadow:  12px -31px 23px 0px #153144,12px 31px 23px 0px #153144;
-  transition: all 400ms ease-in;
+  height: 150vh;
+  background-color: transparent;
 }
 .website-making-video{
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    width: 915px;
-    height:347px;
-    overflow:hidden;
-    position:absolute;
-    left:15%;
-    margin-top: 60vh;
-    margin-left:-130px;
-    pointer-events: none;
-    filter: blur(2px);
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  margin-top: 60vh;
+  pointer-events: none;
+  filter: blur(2px);
+  box-sizing: border-box;
+  padding: 25px;
+  position: absolute;
 }
 .web-developers-content{
-  width: 100%;
+  width: 96%;
   font-size: 100px;
   position: absolute;
-  margin-top: 50%;
+  margin-top: 60%;
   text-align: center;
   left: 0;
   z-index: 10;
+  text-align: right;
   color: aliceblue;
 }
 .section3{
@@ -89,8 +87,7 @@
   width: 100%;
   margin-top: 100vh;
   z-index: 12; 
-  background-color: #15442e;
-  -webkit-box-shadow:  12px -31px 23px 0px #15442e;
+  background-color: transparent;
   height: 115vh;
 }
 .contact-us-content{
