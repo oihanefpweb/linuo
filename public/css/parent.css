@@ -1,8 +1,13 @@
 /* FONTS */
 @font-face {
     font-family: 'Comfortaa';
-    src: url('Comfortaa-Regular.ttf')
-  }
+    src: url('/fonts/Comfortaa-Regular.ttf')format('truetype')
+}
+@font-face {
+    font-family: 'organo';
+    src: url('/fonts/Organo.ttf')format('truetype')
+    
+}
 
 body{
    background-color: #3490dc;;

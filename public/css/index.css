@@ -28,31 +28,6 @@
   text-transform: none;
   color: aliceblue;
 }
-.linkedin-video iframe{
-  width: 535px;
-  height: 400px !important;
-  height: auto;
-  position: relative;
-  z-index: 9;
-  top: -20%;
-  left: -30%;
-  box-shadow: inset 0 0 12px 4px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}
-.linkedin-video{
-    display: none;
-    border:solid 1px #999;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    width:360px;
-    height:290px;
-    overflow:hidden;
-    position:absolute;
-    left:15%;
-    margin-top: 60vh;
-    margin-left:-130px;
-    z-index:10;
-    
-}
 .section2{
   position: relative;
   width: 100%;
@@ -62,9 +37,9 @@
 }
 .website-making-video{
   width: 100%;
-  height: 70%;
+  height: 60%;
   overflow: hidden;
-  margin-top: 60vh;
+  margin-top: 40%;
   pointer-events: none;
   filter: blur(2px);
   box-sizing: border-box;
@@ -75,7 +50,7 @@
   width: 96%;
   font-size: 100px;
   position: absolute;
-  margin-top: 60%;
+  margin-top: 70%;
   text-align: center;
   left: 0;
   z-index: 10;
@@ -85,10 +60,74 @@
 .section3{
   position: relative;
   width: 100%;
-  margin-top: 100vh;
+  margin-top:50%;
   z-index: 12; 
   background-color: transparent;
   height: 115vh;
+}
+.actions{
+  
+  width: 100%;
+  height: 70%;
+  text-align: center;
+  font-family: 'organo';
+  font-size: 60px;
+  font-variant-caps: small-caps;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto ;
+  grid-template-areas: 
+  'design programming'
+  'testing testing '
+  'coding functionality'
+  ;
+
+}
+.floating{
+ /*  display: none; */
+ color: white ;
+ display: none;
+}
+.coding{
+  grid-area: coding;
+  animation-name: floating;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
+  
+}
+.testing{
+  grid-area: testing;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
+}
+.programming{
+  grid-area: programming;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
+}
+.design{
+  grid-area: design;
+  animation-name: floating;
+  animation-duration: 2.15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  margin-top: 5px;
+}
+.functionality{
+  grid-area: functionality;
+  animation-name: floating;
+  animation-duration: 1.85s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px;
 }
 .contact-us-content{
   width: 100%;
@@ -124,6 +163,12 @@
 
 }
 
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
 
 
 
