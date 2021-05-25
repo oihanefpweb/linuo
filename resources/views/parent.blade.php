@@ -37,5 +37,6 @@
         <script src="https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="/js/tilt.js-master/dest/tilt.jquery.min.js" ></script>
     </body>
 </html>

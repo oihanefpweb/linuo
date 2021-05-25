@@ -6,7 +6,10 @@ $(function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     slogan_intro();
-    linkedin_autoplay();
+    $('.floating').on("mouseover" , function(e){
+        opt = $(this).data('floating');
+        background_floating_image(opt)
+    });
     $(document).on("scroll" , function(e){
         e.preventDefault()
         background_color_change()
@@ -89,15 +92,6 @@ $(function() {
 function slogan_intro(){
     $('.slogan').typeIt();
 }
-function linkedin_autoplay(){
-    window.setInterval(reloadIFrame(), 5);
-
-    function reloadIFrame() {
-        var src= $('.linkedin-video iframe').src;
-        $('.linkedin-video iframe').src = src;
-    }
-    
-}
 function background_color_change(){
     if ($(document).scrollTop() >= $(".section1").position().top) {
         $('.home-content').css('background', $(".section1").attr("data-background"));
@@ -113,6 +107,25 @@ function background_color_change(){
         $('.home-content').css('background', $(".section3").attr("data-background"))
     };
 };
+function background_floating_image(opt){
+    var img;
+
+    switch (opt) {
+        case '1':
+            img = ''
+            break;
+        case '2':
+            break;
+        case '3':
+            break;
+        case '4':
+            break;
+        case '5':
+            break;
+    }
+
+
+}
 
 
 

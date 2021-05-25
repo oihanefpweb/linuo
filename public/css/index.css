@@ -37,7 +37,7 @@
 }
 .website-making-video{
   width: 100%;
-  height: 60%;
+  height: 50%;
   overflow: hidden;
   margin-top: 40%;
   pointer-events: none;
@@ -47,20 +47,49 @@
   position: absolute;
 }
 .web-developers-content{
-  width: 96%;
-  font-size: 100px;
+  width: 70%;
+  font-size: 88px;
   position: absolute;
-  margin-top: 70%;
-  text-align: center;
+  margin-top: 68%;
   left: 0;
   z-index: 10;
   text-align: right;
   color: aliceblue;
+  font-weight: bold;
+  margin-left: 27%;
+  padding: 0% 4%;
+}
+.web-developers-content::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.web-developers-content:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.web-developers-content::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: rgba(21, 37, 53, 0.651);
+  z-index: -1;
+  transition: transform .3s ease;
+  border-radius: 5px;
+  box-shadow: rgb(86, 102, 119) 5px 20px 30px -10px;
+}
+.web-developers-content:hover{
+  color: aliceblue !important;
+  font-weight: bold;
+  text-decoration: none;
 }
 .section3{
   position: relative;
   width: 100%;
-  margin-top:50%;
+  margin-top:30%;
   z-index: 12; 
   background-color: transparent;
   height: 115vh;

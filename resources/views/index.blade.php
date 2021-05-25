@@ -11,17 +11,20 @@
         <div class="web-developers-content">
             <a class="web-developers"> Web developers</a>
         </div>
-        <div class="website-making-video">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Oa9LTDR9ugU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="website-making-video"data-tilt-reset='false' data-tilt>
+            <video width="100%" height="100%" autoplay class='project__image'>
+                <source src="/videos/website-making-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
     <div class="section section3" data-background="#15442e">
         <div class="actions">
-            <a class="floating coding">Coding </a>
-            <a class="floating testing"> Testing</a>
-            <a class="floating programming">Programing </a>
-            <a class="floating design"> Design</a>
-            <a class="floating functionality"> Functionality</a>
+            <a class="floating coding" data-floating='1'>Coding </a>
+            <a class="floating testing" data-floating='2'> Testing</a>
+            <a class="floating programming" data-floating='3'>Programing </a>
+            <a class="floating design" data-floating='4'> Design</a>
+            <a class="floating functionality" data-floating='5'> Functionality</a>
         </div>
     </div>
     <div class="section section3" data-background="#15442e">
