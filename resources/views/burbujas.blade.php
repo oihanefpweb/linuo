@@ -1,4 +1,5 @@
-<section class="bubbles sectional text-left text-white orange-yellow fixed_background bg_transparent">
+
+<section class="bubbles sectional text-left text-white orange-yellow fixed_background bg_transparent" id='bubble-section'>
     <div class="container">
         <div class="dentro"></div>
         <div class="bubble-wrap">

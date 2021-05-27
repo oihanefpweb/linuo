@@ -13,7 +13,7 @@ body{
    background-color: #3490dc;;
 }    
 header{
-    font-family: 'Comfortaa';
+    font-family:"Nunito", sans-serif;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -22,6 +22,8 @@ header{
     top: 0;
     position:fixed;
     z-index: 20;
+    font-size: 30px;
+    
     
 }
 .header-logue{
@@ -33,6 +35,15 @@ header{
     color: mintcream;
     width: 30%;
     margin: auto;
+    font-size: 20px;
+}
+header input{
+    color: mintcream;
+    background-color: transparent;
+    border: none;
+    text-shadow: -6px 2px 2px #3d5914;
+    font-weight: bolder;
+
 }
 .content{
     width: 100%;

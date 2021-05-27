@@ -18,29 +18,21 @@
             </video>
         </div>
     </div>
-    <div class="section section3" data-background="#15442e">
-        <div class="actions">
-            <a class="floating coding" data-floating='1'>Coding </a>
-            <a class="floating testing" data-floating='2'> Testing</a>
-            <a class="floating programming" data-floating='3'>Programing </a>
-            <a class="floating design" data-floating='4'> Design</a>
-            <a class="floating functionality" data-floating='5'> Functionality</a>
-        </div>
+    <div class="section section3" data-background="#808080">
+            <div class="actions">
+                <div class="floating design"><a data-floating='1'>Design</a> </div>
+                <div class="floating programming"><a data-floating='2'>Programing</a> </div>
+                <div class="floating testing"><a data-floating='3'>Testing</a></div><br>
+                <div class="floating coding"><a data-floating='4'>Coding</a></div>
+                <div class="floating functionality"><a data-floating='5'>Functionality</a></div>
+            </div>
+        
     </div>
-    <div class="section section3" data-background="#15442e">
-        <div class="web-developers-content">
-            <a class="web-developers"> Web developers</a>
-        </div>
-
-        <!-- 
-            <div class="ball-bounce-content">
-            <div class="ball-bounce"></div>
-            </div> 
-        -->
+    <div class="section section4" data-background="#06061A">
+        @include('burbujas')
         <div class="contact-us-content">
             <a class="contact-us"> Contáctanos</a>
         </div>
-
     </div>
    
 </div>
