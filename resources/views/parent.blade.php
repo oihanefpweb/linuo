@@ -18,7 +18,7 @@
                 <a href="{{('/')}}"><input type="button"  id="button-r" value="HOME"></div></a>
             </div>
             <div class="header-logue">
-                <a href="{{('/')}}"><img src="{{asset('images/logo/LinUO.png')}}" id="logue" alt="Logotipo de LinUO"></img></a>
+                <a href="{{('/')}}"><img src="{{asset('images/logo/LinuoRB.png')}}" id="logue" alt="Logotipo de LinUO"></img></a>
             </div>
             <div class="header-menu-r">
             <a href="{{('/contacto')}}"><input type="button"  id="button-l" value="CONTÁCTANOS"></div></a>
