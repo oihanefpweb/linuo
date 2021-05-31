@@ -23,14 +23,16 @@ header{
     position:fixed;
     z-index: 20;
     font-size: 30px;
-    
-    
 }
 .header-logue{
     width: 40%;
     margin: auto;
 }
-#logue{ max-width: 100%; width:40%;max-height: 30%; } 
+#logue{
+    max-width: 100%;
+    width:40%;
+    max-height: 30%;
+} 
 .header-menu-l, .header-menu-r{
     color: mintcream;
     width: 30%;
@@ -43,7 +45,6 @@ header input{
     border: none;
     text-shadow: -6px 2px 2px #3d5914;
     font-weight: bolder;
-
 }
 .content{
     width: 100%;
