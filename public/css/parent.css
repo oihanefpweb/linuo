@@ -8,6 +8,11 @@
     src: url('/fonts/Organo.ttf')format('truetype')
     
 }
+@font-face {
+    font-family: 'terminal';
+    src: url('/fonts/LUCON.TTF')format('truetype')
+    
+}
 
 body{
    background-color: #3490dc;;

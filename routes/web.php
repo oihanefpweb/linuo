@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
+Route::get('/contacto', [ContactoController::class, 'index']);
