@@ -18,3 +18,10 @@
     display: block;
     position: relative;
 }
+
+.modal-title{
+    color:#008000
+}
+.info{
+    color:#C0C0C0
+}
