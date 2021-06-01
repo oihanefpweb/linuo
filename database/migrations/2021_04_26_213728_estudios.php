@@ -18,8 +18,8 @@ class Estudios extends Migration
             $table->string('nombre');
             $table->string('descripcion')->nullable();
             $table->string('centro');
-            $table->timestamp("fecha_inicio");
-            $table->timestamp("fecha_fin")->nullable();
+            $table->string("fecha_inicio");
+            $table->string("fecha_fin")->nullable();
             $table->unsignedBigInteger("persona");
             $table->foreign("persona")->references("id")->on("persona")->onDelete("cascade");
         });
