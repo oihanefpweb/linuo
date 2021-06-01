@@ -15,6 +15,7 @@ class Experiencia extends Model
         'puesto', 
         'nombre',
         'descripcion',
+        'tipo_contrato',
         'localizacion', 
         'fecha_inicio',
         'fecha_fin'

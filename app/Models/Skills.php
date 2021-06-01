@@ -14,4 +14,6 @@ class Skills extends Model
         'nombre'
     ];
     
+    public $timestamps = false;
+    
 }

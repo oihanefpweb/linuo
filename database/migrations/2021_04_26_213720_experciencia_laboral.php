@@ -17,6 +17,7 @@ class ExpercienciaLaboral extends Migration
             $table->id();
             $table->string('puesto');
             $table->string('nombre');
+            $table->string('tipo_contrato');
             $table->string('descripcion')->nullable();
             $table->string('localizacion')->nullable();
             $table->timestamp("fecha_inicio");
