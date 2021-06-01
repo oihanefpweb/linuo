@@ -31,7 +31,7 @@
     <div class="section section4" data-background="#06061A">
         @include('burbujas')
         <div class="contact-us-content">
-            <a class="contact-us"> Contáctanos</a>
+            <a class="contact-us"> Contact us</a>
         </div>
     </div>
    

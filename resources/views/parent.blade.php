@@ -11,6 +11,8 @@
         <link href="{{ asset('css/contacto.css') }}" rel="stylesheet" type="text/css">
 
         <link href="{{ asset('css/burbujas.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('css/modal-contacto.css') }}" rel="stylesheet" type="text/css">
+
     </head>
     <body>
         <header>
@@ -21,7 +23,7 @@
                 <a href="{{('/')}}"><img src="{{asset('images/logo/LinuoRB.png')}}" id="logue" alt="Logotipo de LinUO"></img></a>
             </div>
             <div class="header-menu-r">
-            <a href="{{('/contacto')}}"><input type="button"  id="button-l" value="CONTÁCTANOS"></div></a>
+            <a href="{{('/contacto')}}"><input type="button"  id="button-l" value="CONTACT US"></div></a>
             </div>
         </header>
         <div  class="content">

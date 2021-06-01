@@ -11,8 +11,19 @@
     </div>
     <div class='modal-bg'>
         <div class='modal'>
-
-        </div>
+            <div class='modal-header'>
+                <div class='modal-close'><a>X</a></div>
+                <div class='modal-dir'><a class='modal-name'></a> @ubuntu: ~</div>
+            </div>
+            <div class='modal-body'>
+                <div class='personal-info'>
+                    <p class="modal-title">personal@info:~</p>
+                    <p class='info'>Nombre</p>
+                    <p class='info'> </p>
+                    <p class='info'> </p>
+                    <p class='info'> </p>
+                </div>
+            </div>
     </div>
 @endsection
 
