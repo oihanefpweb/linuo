@@ -17,10 +17,11 @@ class Persona extends Migration
         Schema::create('persona', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('apellidos');
-            $table->text("resumen");
-            $table->text("telefono");            
-            $table->text("direccion");
+            $table->string('apellido1');
+            $table->string('apellido2');
+            $table->text("resumen")->nullable();
+            $table->string("telefono")->nullable();
+            $table->string("email")->nullable();
         });
         DB::statement("ALTER TABLE persona ADD foto_perfil MEDIUMBLOB");
     }

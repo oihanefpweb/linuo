@@ -15,6 +15,7 @@ class ExpercienciaLaboral extends Migration
     {
         Schema::create('experiencia', function (Blueprint $table) {
             $table->id();
+            $table->string('puesto');
             $table->string('nombre');
             $table->string('descripcion')->nullable();
             $table->string('localizacion')->nullable();

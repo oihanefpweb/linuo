@@ -1,0 +1,137 @@
+[
+    {
+        "personalInfo":{
+            "name":"Unai",
+            "lastName1":"Martin",
+            "lastName2":"Gonzalez",
+            "birthday":"06-04-1996"
+        },
+        "contactInfo":[
+            {
+                "type":"mobile",
+                "value":"651425368"
+            },
+            {
+                "type":"email",
+                "value":"unaimarg@gmail.com"
+            }
+        ],
+        "experience":[
+            {
+                "position":"Desarrollador web",
+                "jobType":"Contrato en practicas",
+                "business":"Finanbest",
+                "location":"Bilbao-Bilbo, País Vasco / Euskadi, España",
+                "startDate":"01-02-2021",
+                "finalDate":"01-02-2021",
+                "description":""
+            }
+        ],
+        "studies":[
+            {
+                "college":"C.E.Almi",
+                "degree":"Técnico Desarrollador de Aplicaciones Multiplataforma",
+                "discipline":"Informática",
+                "startYear":"2018",
+                "finalYear":"2020"
+            },
+            {
+                "college":"CIFP TXURDINAGA LHII",
+                "degree":"Técnico Desarrollador de Aplicaciones Web",
+                "discipline":"Informática",
+                "startYear":"2020",
+                "finalYear":"2021"
+            }
+        ],
+        "skills":[
+            "php",
+            "C#",
+            "JavaScript",
+            "Angular",
+            "SQL",
+            "Python",
+            "CSS3",
+            "HTML5",
+            "Java",
+            "Android",
+            "Laravel",
+            "Trabajo en Equipo",
+            "Symfony"
+        ]
+    },
+    {
+        "personalInfo":{
+            "name":"Ohiane",
+            "lastName1":"Arranz",
+            "lastName2":"de Castro",
+            "birthday":""
+        },
+        "contactInfo":[
+            {
+                "type":"email",
+                "value":"oarranz99@gmail.com"
+            }
+        ],
+        "experience":[
+            {
+                "position":"Desarrollador web",
+                "jobType":"Contrato en practicas",
+                "business":"Finanbest",
+                "location":"Bilbao-Bilbo, País Vasco / Euskadi, España",
+                "startDate":"01-02-2021",
+                "finalDate":"01-02-2021",
+                "description":""
+            },
+            {
+                "position":"Dependiente de Tienda",
+                "jobType":"Contrato tiempo parcial",
+                "business":"Dooerssneakers",
+                "location":"Basauri, País Vasco / Euskadi, España",
+                "startDate":"01-06-2019",
+                "finalDate":"01-09-2019",
+                "description":"Atención al cliente, cobro en caja, almacén, pedidos. "
+            },
+            {
+                "position":"Analista Químico",
+                "jobType":"Analist",
+                "business":"MPWiK S.A.",
+                "location":"Krakow, Poland",
+                "startDate":"01-03-2019",
+                "finalDate":"01-05-2019",
+                "description":"Prácticas. Análisis químicos a muestras aguas, así como toma de muestras."
+            }
+        ],
+        "studies":[
+            {
+                "college":"CIFP TXURDINAGA LHII",
+                "degree":"Desarrollador de Aplicaciones Web",
+                "discipline":"Informática",
+                "startYear":"2019",
+                "finalYear":"2021"
+            },
+            {
+                "college":"CIFP TXURDINAGA LHII",
+                "degree":"Tecnico de Laboratorio de análisis y control de calidad",
+                "discipline":"Quimica",
+                "startYear":"2017",
+                "finalYear":"2019"
+            }
+        ],
+        "skills":[
+            "php",
+            "JavaScript",
+            "SQL",
+            "JQuery",
+            "CSS3",
+            "HTML5",
+            "Adobe Photoshop",
+            "Laravel",
+            "Trabajo en Equipo",
+            "Creatividad",
+            "Habilidades Sociales",
+            "Comunidacion",
+            "Ofimática",
+            "Desarrollo en wordpress"
+        ]
+    }
+]

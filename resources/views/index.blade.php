@@ -4,7 +4,7 @@
 <div class="home-content">
     <div class="section section1" data-background="#3498db">
         <div class="slogan-content">
-            <a class="slogan"> Linked in</br>Unai & Oihane<span>&#160;</span></a>
+            <a class="slogan"> Linked in<br>Unai & Oihane<span>&#160;</span></a>
         </div>
     </div>
     <div class="section section2" data-background="#153144">

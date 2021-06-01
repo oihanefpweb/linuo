@@ -10,7 +10,18 @@ class Estudios extends Model
     use HasFactory;
     protected $table = 'estudios';
 
-    protected $fillable = ['Nombre', 'Fecha_Final','Fecha_Inicio', 'Localizacion'];
-    protected $guarded = ['Id_Estudio', 'Id_Personal'];
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'centro',
+        'fecha_inicio',
+        'fecha_fin'
+    ];
+
+    protected $casts = [
+        'fecha_inicio' => 'datetime',
+        'fecha_fin' => 'datetime',
+    ];
+
     public $timestamps = false;
 }
