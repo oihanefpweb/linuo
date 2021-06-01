@@ -10,7 +10,8 @@ class Skills extends Model
     use HasFactory;
     protected $table = 'skills';
 
-    protected $fillable = ['Nombre'];
-    protected $guarded = ['Id_Personal', 'Id_Skill'];
-    public $timestamps = false;
+    protected $fillable = [
+        'nombre'
+    ];
+    
 }

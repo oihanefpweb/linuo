@@ -7,15 +7,11 @@ use Illuminate\Support\Facades\Http;
 
 class RequestApiAbstract{
 
-    protected $host = "https://api.linkedin.com";
+    protected $host = "https://api.linkedin.com/";
 
-    protected $api = "/v2";
+    protected $api_token = "oauth/v2";
 
-    private $api_token;
-
-    public function __construct(){
-        $this->api_token = env("LINKEDIN_API_TOKEN");
-    }
+    protected $api = "v2";
 
     public function request($request_type, $url, $headers = array(), $data = array()) : ?Response {
         $new_headers = $headers;

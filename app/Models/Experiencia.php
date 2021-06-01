@@ -8,9 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Experiencia extends Model
 {
     use HasFactory;
-    protected $table = 'experiencia_laboral';
 
-    protected $fillable = ['Nombre_Compañia', 'Descripcion','Fecha_Final','Fecha_Inicio', 'Localizacion'];
-    protected $guarded = ['Id_Personal', 'Id_Experiencia'];
+    protected $table = 'experiencia';
+
+    protected $fillable = [
+        'puesto', 
+        'nombre',
+        'descripcion',
+        'localizacion', 
+        'fecha_inicio',
+        'fecha_fin'
+    ];
+
+    protected $casts = [
+        'fecha_inicio' => 'datetime',
+        'fecha_fin' => 'datetime',
+    ];
+
     public $timestamps = false;
 }

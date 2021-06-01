@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Http\Api\LinkedinApiManager;
+use DateInterval;
 use DateTime;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -43,8 +44,10 @@ class LinkedinImport implements ShouldQueue
                 $response_data = $http_response->object();
                 //TODO gestionar los datos recibidos
             }
-            //mas un dia
-            DB::update("UPDATE cron_jobs SET last_update = ? WHERE id = ?", [(new DateTime())->getTimestamp() ,$job->id]);
+            //mas 1 semana
+            $one_week = new DateTime();
+            $one_week->add(new DateInterval("P7D"));
+            DB::update("UPDATE cron_jobs SET last_update = ? WHERE id = ?", [$one_week->getTimestamp() ,$job->id]);
         }
     }
 }

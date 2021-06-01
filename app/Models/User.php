@@ -11,33 +11,34 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+
+    protected $table = 'persona';
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
+        'nombre',
+        'apellido1',
+        'apellido2',
+        'resumen',
+        'telefono',
         'email',
-        'password',
+        'foto_perfil',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    public $timestamps = false;
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function experiencias(){
+        return $this->hasMany(Experiencia::class, "persona", "id");
+    }
+    public function estudios(){
+        return $this->hasMany(Estudios::class, "persona", "id");
+    }
+    public function skills(){
+        return $this->hasMany(Skills::class, "persona", "id");
+    }
 }
