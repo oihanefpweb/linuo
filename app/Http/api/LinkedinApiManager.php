@@ -5,7 +5,7 @@ namespace App\Http\Api;
 class LinkedinApiManager extends RequestApiAbstract{
     
     private $endpoints = array(
-        "people" => '/me?oauth2_access_token={linkedin_key}',
+        "people" => '/me?oauth2_access_token={linkedin_key}&projection=(profilePicture(displayImage~:playableStreams))',
         "authorization" => "/accessToken?client_id={client_id}&client_secret={client_secret}&grant_type=authorization_code&redirect_uri={redirect_uri}&code={code}"
     );
 

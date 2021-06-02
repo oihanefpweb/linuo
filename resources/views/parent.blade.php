@@ -19,13 +19,13 @@
     <body>
         <header>
             <div class="header-menu-l">
-                <a href="{{('/')}}"><input type="button"  id="button-r" value="HOME"></div></a>
+                <a href="{{('/')}}">HOME</a>
             </div>
             <div class="header-logue">
                 <a href="{{('/')}}"><img src="{{asset('images/logo/LinuoRB.png')}}" id="logue" alt="Logotipo de LinUO"></img></a>
             </div>
             <div class="header-menu-r">
-            <a href="{{('/contacto')}}"><input type="button"  id="button-l" value="CONTACT US"></div></a>
+            <a href="{{('/contacto')}}">CONTACT US</a>
             </div>
         </header>
         <div  class="content">

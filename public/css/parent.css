@@ -27,29 +27,32 @@ header{
     top: 0;
     position:fixed;
     z-index: 20;
-    font-size: 30px;
 }
 .header-logue{
     width: 40%;
+    padding: 1%;
     margin: auto;
 }
 #logue{
+    width: auto;
+    height: auto;
     max-width: 100%;
-    width:40%;
-    max-height: 30%;
+    max-height: 20vh;
 } 
 .header-menu-l, .header-menu-r{
+    margin: auto;
+    text-align: center;
     color: mintcream;
     width: 30%;
-    margin: auto;
     font-size: 20px;
 }
-header input{
+header a{
     color: mintcream;
     background-color: transparent;
     border: none;
     text-shadow: -6px 2px 2px #3d5914;
     font-weight: bolder;
+    text-decoration: none;
 }
 .content{
     width: 100%;
