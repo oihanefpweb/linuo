@@ -24,4 +24,8 @@ class Estudios extends Model
     ];
 
     public $timestamps = false;
+    static function getEst($id){
+        $contact_est = self::where('persona', $id)->get();
+        return $contact_est;
+    }
 }

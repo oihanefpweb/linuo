@@ -43,5 +43,9 @@ class User extends Authenticatable
     public function skills(){
         return $this->hasMany(Skills::class, "persona", "id");
     }
+    static function getUsr($id){
+        $info_data = self::find($id);
+        return $info_data;
+    }
     
 }

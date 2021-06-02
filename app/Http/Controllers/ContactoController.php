@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Estudios;
+use App\Models\Experiencia;
+use App\Models\Skills;
+
+
 use Log;
 use Illuminate\Support\Facades\Schema;
 
@@ -23,16 +28,36 @@ class ContactoController extends Controller
     }
 
     public function ajaxRequestPost(Request $request){
+        $complete_info = [];
         $usr = $request->id;
         if($usr){
-            //$usr_info=User::where('id',$usr)->get();
-            $info_data = User::find($usr);
+            $info_data = User::getUsr($usr);
+            $info = [
+                'title' => 'personal@info',
+                'info_data' => $info_data
+            ];
+            $contact_skills = Skills::getSkills($usr);
+            $skills = [
+                'title' => 'skills@info',
+                'info_data' => $contact_skills
+            ];
+            
+            $contact_exp = Experiencia::getExp($usr);
+            $exp = [
+                'title' => 'experience@info',
+                'info_data' => $contact_exp
+            ];
+            $contact_est = Estudios::getEst($usr);
+            $studies = [
+                'title' => 'estudies@info',
+                'info_data' => $contact_est
+            ];
 
+            array_push($complete_info,$info,$skills,$exp,$studies);
         }
-        return $info_data->toJson();
+        return  json_encode($complete_info);
 
     }
-
 
 /* 
     if($request->ajax()){

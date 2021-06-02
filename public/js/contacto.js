@@ -13,7 +13,9 @@ $(function(){
 
     function getUserInfo (id) {
         /* La ruta hay que ponerla asi en laravel 8 {{route('ajax...')}} no funciona si esta en un js externo */
-        
+        var title,
+            info_data;
+
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
             url: "/ajaxRequest",
@@ -25,6 +27,12 @@ $(function(){
             dataType: 'JSON',
             success: function(data) {
                 console.log(data);
+                for (let index = 0; index < data.length; index++) {
+                    var table = $('<table/>'), 
+                        tbody= $('<tbody/>'),
+                        span = $('<span/>') ;
+                    data.index.title
+                }
                 $('.modal-bg').show().css('display','flex');
                 $('.modal').show();
             }

@@ -27,4 +27,9 @@ class Experiencia extends Model
     ];
 
     public $timestamps = false;
+
+    static function getExp($id){
+        $contact_exp = self::where('persona', $id)->get();
+        return $contact_exp;
+    }
 }

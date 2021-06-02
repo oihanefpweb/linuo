@@ -16,4 +16,8 @@ class Skills extends Model
     
     public $timestamps = false;
     
+    static function getSkills($id){
+        $contact_skills = self::where('persona', $id)->get();
+        return $contact_skills;
+    }
 }
