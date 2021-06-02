@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Http\Api\LinkedinApiManager;
 use App\Models\Estudios;
 use App\Models\Experiencia;
 use App\Models\Skills;
@@ -18,11 +19,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $linkedin_api = new LinkedinApiManager();
         $jsonString = file_get_contents(base_path("database/seeders/linkedin_data.json"));
         $users = json_decode($jsonString, true);
         foreach($users as $userData){
             $user = new User();
+            
             $user->nombre = $userData["personalInfo"]["name"];
             $user->apellido1 = $userData["personalInfo"]["lastName1"];
             $user->apellido2 = $userData["personalInfo"]["lastName2"];
@@ -33,6 +35,12 @@ class DatabaseSeeder extends Seeder
                     $user->email = $contactInfo["value"];
                 }
             }
+            if(!empty($userData["token"])){
+                $linken_img_data = $linkedin_api->getUser();
+                $photos = $linken_img_data["profilePicture"]["displayImage~"]["elements"];
+                $user->foto_perfil = $photos[count($photos)-1]["identifiers"]["identifier"];
+            }
+            
             $user->save();
             foreach($userData["experience"] as $experienceData){
                 $experience = new Experiencia();
