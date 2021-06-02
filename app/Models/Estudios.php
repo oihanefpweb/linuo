@@ -17,12 +17,7 @@ class Estudios extends Model
         'fecha_inicio',
         'fecha_fin'
     ];
-
-    protected $casts = [
-        'fecha_inicio' => 'datetime',
-        'fecha_fin' => 'datetime',
-    ];
-
+    
     public $timestamps = false;
     static function getEst($id){
         $contact_est = self::where('persona', $id)->get();
