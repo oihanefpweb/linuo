@@ -14,18 +14,10 @@
         <div class='modal' >
             <div class='modal-header'>
                 <div class='modal-close'><a>X</a></div>
-                <div class='modal-dir'><a class='modal-name'></a> @ubuntu: ~</div>
+                <div class='modal-dir'><a class='modal-name'></a>@ubuntu: ~</div>
             </div>
             <div class='modal-body'>
-                <table class='personal-info'>
-                    <span class="modal-title">personal@info:~</span>
-                    <tbody>
-                        <tr>
-                            <td class='info info-title'>Nombre</td>
-                            <td class='info info-content'>Nombre</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
             </div>
     </div>
 @endsection

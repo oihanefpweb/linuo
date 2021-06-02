@@ -27,6 +27,11 @@
     padding: 5px 10px;
 
 }
+.modal-body{
+    height: 92%;
+    margin: 8px;
+    overflow-y: scroll;
+}
 .modal-dir{
     margin: auto;
     color:#C0C0C0;
@@ -43,7 +48,7 @@
 .modal-close a {
     margin: auto;
 }
-.modal-title{
+.table-title{
     color:#008000
 }
 .info{

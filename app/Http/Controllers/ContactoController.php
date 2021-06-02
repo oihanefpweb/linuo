@@ -34,7 +34,7 @@ class ContactoController extends Controller
             $info_data = User::getUsr($usr);
             $info = [
                 'title' => 'personal@info',
-                'info_data' => $info_data
+                'info_data' => [$info_data]
             ];
             $contact_skills = Skills::getSkills($usr);
             $skills = [
