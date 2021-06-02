@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/contacto', [ContactoController::class, 'index']);
+Route::post('/ajaxRequest', [ContactoController::class, 'ajaxRequestPost']);

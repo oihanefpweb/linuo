@@ -61,12 +61,16 @@
     },
     {
         "personalInfo":{
-            "name":"Ohiane",
+            "name":"Oihane",
             "lastName1":"Arranz",
             "lastName2":"de Castro",
-            "birthday":""
+            "birthday":"07-08-1999"
         },
         "contactInfo":[
+            {
+                "type":"mobile",
+                "value":"652266215"
+            },
             {
                 "type":"email",
                 "value":"oarranz99@gmail.com"
@@ -79,7 +83,7 @@
                 "business":"Finanbest",
                 "location":"Bilbao-Bilbo, País Vasco / Euskadi, España",
                 "startDate":"01-02-2021",
-                "finalDate":"01-02-2021",
+                "finalDate":"01-05-2021",
                 "description":""
             },
             {
