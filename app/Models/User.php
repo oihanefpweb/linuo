@@ -44,7 +44,7 @@ class User extends Authenticatable
         return $this->hasMany(Skills::class, "persona", "id");
     }
     static function getUsr($id){
-        $info_data = self::find($id);
+        $info_data = self::select('nombre', 'apellido1','apellido2','resumen','telefono','email')->find($id);
         return $info_data;
     }
     

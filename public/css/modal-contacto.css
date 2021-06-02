@@ -63,4 +63,5 @@ td{
     padding: 0px 5px;
     width: auto;
     height: auto;
+    text-transform: capitalize;
 }

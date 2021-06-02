@@ -33,9 +33,23 @@ $(function(){
                         row_content;
                     for(let index2 = 0; index2 < data[index].info_data.length; index2++) {
                         $.each(data[index].info_data[index2], function (key, val) {
-                            row_content = '<tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
-                                tbody.append(row_content);
-                                console.log(row_content)
+                            
+                            if(val){
+                                if(key.includes('_')){
+                                    key = key.replace("_"," ");
+                                }
+                                if(data[index].title == 'skills@info'){
+                                    row_content = '<tr><td class="info" colspan="2">'+val+'</td></tr>';
+                                }
+                                else if(key == 'fecha inicio' || key == 'fecha fin'){
+                                    row_content = '<tr><td class="info">'+key+'</td><td class="info">'+getDate(val)+'</td></tr>';
+                                }
+                                else{
+                                    row_content = '<tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
+                                }
+                                
+                            }
+                            tbody.append(row_content);
                         });
                     }
                     table.append(span),
@@ -47,5 +61,28 @@ $(function(){
             }
         });
         
+    }
+    function getDate(date) { 
+        var mes;
+        const MESES = [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre",
+        ];
+        const f = new Date(date);
+        
+        mes = MESES[f.getMonth()];
+        year = f.getFullYear();
+        return mes + ' '+ year;
+
     }
 })

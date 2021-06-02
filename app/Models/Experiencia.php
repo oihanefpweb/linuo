@@ -29,7 +29,7 @@ class Experiencia extends Model
     public $timestamps = false;
 
     static function getExp($id){
-        $contact_exp = self::where('persona', $id)->get();
+        $contact_exp = self::select('puesto','nombre','localizacion','tipo_contrato', 'descripcion','fecha_inicio','fecha_fin')->where('persona', $id)->get();
         return $contact_exp;
     }
 }

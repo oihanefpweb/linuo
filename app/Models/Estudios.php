@@ -20,7 +20,7 @@ class Estudios extends Model
     
     public $timestamps = false;
     static function getEst($id){
-        $contact_est = self::where('persona', $id)->get();
+        $contact_est = self::select('nombre','centro','descripcion','fecha_inicio','fecha_fin')->where('persona', $id)->get();
         return $contact_est;
     }
 }
