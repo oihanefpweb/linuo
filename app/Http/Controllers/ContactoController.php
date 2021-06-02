@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use App\Models\Contacto;
+use App\Models\User;
 use Log;
 
 class ContactoController extends Controller
@@ -12,8 +12,9 @@ class ContactoController extends Controller
     //Users info requests
 
     public function index(){
-        $info = Contacto::select('Nombre','Foto')->get();
-        return view('contacto', compact('info'));
+        //$info =  User::select('Nombre','Foto')->get();
+        //return view('contacto', compact('info'));
+        return view('contacto');
     }
 
 /* 
