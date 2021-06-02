@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
                 }
             }
             if(!empty($userData["token"])){
-                $linken_img_data = $linkedin_api->getUser();
+                $linken_img_data = $linkedin_api->getUser($userData["token"]);
                 $photos = $linken_img_data["profilePicture"]["displayImage~"]["elements"];
                 $user->foto_perfil = $photos[count($photos)-1]["identifiers"]["identifier"];
             }
