@@ -11,7 +11,7 @@
     
 }
 .modal{
-    width: 80%;
+    width: auto;
     height: 60%;
     margin: auto;
     background-color: rgba(48, 10, 36, 0.788);
@@ -55,13 +55,14 @@
     color:#C0C0C0
 }
 table{
-    margin: 0px 15px;
-    width: auto;
-    height: auto;
+    margin: 0px 15px 15px 0px;
 }
-td{
+td:nth-child(odd){
     padding: 0px 5px;
     width: auto;
     height: auto;
     text-transform: capitalize;
+}
+tr{
+    height: 35px;
 }

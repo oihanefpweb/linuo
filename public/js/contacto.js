@@ -31,26 +31,30 @@ $(function(){
                     var table = $('<table/>'), 
                         tbody= $('<tbody/>'),
                         span = $('<span/>').addClass('table-title').text(data[index].title),
-                        space = '<tr></tr>',
+                        space = '<br>',
                         row_content = "";
                     for(let index2 = 0; index2 < data[index].info_data.length; index2++) {
-                        $.each(data[index].info_data[index2], function (key, val) {
-                            if(val){
-                                if(key.includes('_')){
-                                    key = key.replace("_"," ");
+                        
+                            $.each(data[index].info_data[index2], function (key, val) {
+                                if(val){
+                                    if(key.includes('_')){
+                                        key = key.replace("_"," ");
+                                    }
+                                    if(data[index].title == 'skills@info'){
+                                        row_content = '<tr><td class="info skills" colspan="2">'+val+'</td></tr>';
+                                    } 
+                                    else if(key == 'fecha inicio' || key == 'fecha fin'){
+                                        row_content = '<tr><td class="info title">'+key+'</td><td class="info">'+getDate(val)+'</td></tr>';
+                                    }
+                                    else{
+                                        row_content = '<tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
+                                    }
+                                    if(row_content!="") tbody.append(row_content);
                                 }
-                                if(data[index].title == 'skills@info'){
-                                    row_content = '<tr><td class="info" colspan="2">'+val+'</td></tr>';
-                                } 
-                                else if(key == 'fecha inicio' || key == 'fecha fin'){
-                                    row_content = '<tr><td class="info">'+key+'</td><td class="info">'+getDate(val)+'</td></tr>';
-                                }
-                                else{
-                                    row_content = '<tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
-                                }
-                                if(row_content!="") tbody.append(row_content);
-                            }
-                        });
+                            });
+                        if(data[index].title == 'estudies@info'){
+                            tbody.append(space)
+                        }
                     }
                     table.append(span),
                     table.append(tbody);
