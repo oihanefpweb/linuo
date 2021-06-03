@@ -7,7 +7,7 @@
     <div class='content contact-content'>
 
     @foreach($info as $obj)
-        <div class='{{$obj["nombre"]}}-bg contacto' id='{{$obj["id"]}}' style= 'background:url("/images/contactanos/oihane.jpg")no-repeat; background-size: 250px 250px '><a class ='contact_name'>{{$obj["nombre"]}}</a></div>
+        <div class='{{$obj["nombre"]}}-bg contacto' id='{{$obj["id"]}}' style= 'background:url("{{$obj["foto_perfil"]}}")no-repeat; background-size: 250px 250px '><a class ='contact_name'>{{$obj["nombre"]}}</a></div>
     @endforeach
     </div>
     <div class='modal-bg ' >
