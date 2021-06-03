@@ -52,7 +52,7 @@ $(function() {
                 slogan_count = 0;
             }
         }
-        else if(y > 550){
+        if(y > 550){
             if(slogan_count == 0){ 
                 $('.slogan-content').toggle(1000);
                 slogan_count = 1;
