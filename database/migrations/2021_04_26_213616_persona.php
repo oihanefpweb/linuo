@@ -22,7 +22,7 @@ class Persona extends Migration
             $table->text("resumen")->nullable();
             $table->string("telefono")->nullable();
             $table->string("email")->nullable();
-            $table->string("foto_perfil")->nullable();
+            $table->text("foto_perfil")->nullable();
             $table->text("token")->nullable();
         });
         //DB::statement("ALTER TABLE persona ADD foto_perfil MEDIUMBLOB");
