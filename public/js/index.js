@@ -126,13 +126,20 @@ $(function() {
         }
         if(y > (total_page* 0.948)){
             if(bubble_count == 0){
-                $(" #bubble-section").show(500);
-                $(".contact-us").show(500);
-                $(".contact-us").animate({
-                    fontSize: "4rem"
-                }, 1000);
-                
-                
+                if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    // some code..
+                    $(" #bubble-section").show(500);
+                    $(".contact-us").show(500);
+                    $(".contact-us").animate({
+                        fontSize: "4rem"
+                    }, 1000);
+                }else{
+                    $(" #bubble-section").show(500);
+                    $(".contact-us").show(500);
+                    $(".contact-us").animate({
+                        fontSize: "7rem"
+                    }, 1000);
+                }
                 bubble_count = 1
             } 
         }

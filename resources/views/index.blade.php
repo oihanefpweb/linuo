@@ -22,7 +22,7 @@
             <div class="actions">
                 <div class="floating design"><a data-floating='1'>Design</a> </div>
                 <div class="floating programming"><a data-floating='2'>Programing</a> </div>
-                <div class="floating testing"><a data-floating='3'>Testing</a></div><br>
+                <div class="floating testing"><a data-floating='3'>Testing</a></div>
                 <div class="floating coding"><a data-floating='4'>Coding</a></div>
                 <div class="floating functionality"><a data-floating='5'>Functionality</a></div>
             </div>
@@ -31,7 +31,7 @@
     <div class="section section4" data-background="#06061A">
         @include('burbujas')
         <div class="contact-us-content">
-            <a class="contact-us"> Contact us</a>
+            <a class="contact-us" href="{{('/contacto')}}" > Contact us</a>
         </div>
     </div>
    

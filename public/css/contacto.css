@@ -10,8 +10,8 @@
     display: flex;
     margin: auto;
     text-align: center;
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -22,7 +22,8 @@
 }
 .contact_name{
     margin: auto;
-    font-size: 40px;
+    font-size: 5rem;
+    text-transform: capitalize;
 }
 
 /* BG MOVEMENT */
