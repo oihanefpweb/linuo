@@ -7,6 +7,7 @@ $(function(){
     })
     $('.contacto').on('click', function (e) {
         e.preventDefault();
+        $('.modal-body').html('')
         getUserInfo(this.id);
        
     })
@@ -30,8 +31,11 @@ $(function(){
                     var table = $('<table/>'), 
                         tbody= $('<tbody/>'),
                         span = $('<span/>').addClass('table-title').text(data[index].title),
+                        space = '<tr></tr>',
                         row_content;
+                        
                     for(let index2 = 0; index2 < data[index].info_data.length; index2++) {
+
                         $.each(data[index].info_data[index2], function (key, val) {
                             
                             if(val){
@@ -40,7 +44,7 @@ $(function(){
                                 }
                                 if(data[index].title == 'skills@info'){
                                     row_content = '<tr><td class="info" colspan="2">'+val+'</td></tr>';
-                                }
+                                } 
                                 else if(key == 'fecha inicio' || key == 'fecha fin'){
                                     row_content = '<tr><td class="info">'+key+'</td><td class="info">'+getDate(val)+'</td></tr>';
                                 }
