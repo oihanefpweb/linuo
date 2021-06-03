@@ -1,11 +1,13 @@
 $(function() {
+    var lastState = 1;
+    var state = 0;
     var slogan_count = 0;
     var coding_count = 1;
     var web_video_count = 1;
     var bubble_count = 0;
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    slogan_intro();
+    items_animations();
     $('.floating a ').on("mouseover" , function(e){
         var img = $(this).data('floating');
         switch (img) {
@@ -14,7 +16,6 @@ $(function() {
                 break;
             case 2:
                 url = '/images/index/programming.png'
-
                 break;
             case 3:
                 url = '/images/index/testing.png'
@@ -40,12 +41,36 @@ $(function() {
 
         });
     });
-    $(document).on("scroll" , function(e){
-        e.preventDefault()
-        background_color_change()
-        items_animations($(document).scrollTop())
+
+    $(document).on("scroll" , async function(e){
+        e.preventDefault();
+        scrollPercent = Math.round(100 * $(window).scrollTop() / ($(document).height() - $(window).height()));
+        await background_color_change();
+        items_animations($(document).scrollTop());
     });
+    
     function items_animations(y){
+        if(lastState != state){
+            disableAll();
+            setTimeout(()=>{
+                switch(state){
+                    case 0:
+                        activate(state+1);
+                        $('.slogan').typeIt();
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3: 
+                        break;
+                }
+                lastState = state;
+            }, 500);
+            lastState = state;
+        }
+        
+        /*
         if(y < 550){
             if(slogan_count == 1){
                 $('.slogan-content').toggle(1000);
@@ -116,26 +141,37 @@ $(function() {
                 bubble_count = 0
             } 
         }
+        */
     }
 
-})
-function slogan_intro(){
-    $('.slogan').typeIt();
+});
+
+function disableAll(){
+    $('.section').css("opacity", "0");
+}
+function activate(index){
+    $('.section'.index).css("opacity", "1");
 }
 function background_color_change(){
-    if ($(document).scrollTop() >= $(".section1").position().top) {
-        $('.home-content').css('background', $(".section1").attr("data-background"));
-    };
-    if ($(document).scrollTop() >= $(".section2").position().top) {
-        $('.home-content').css('background', $(".section2").attr("data-background"))
-    };
-
-    if ($(document).scrollTop() >= $(".section3").position().top) {
-        $('.home-content').css('background', $(".section3").attr("data-background"))
-    };
-    if ($(document).scrollTop() >= $(".section4").position().top) {
-        $('.home-content').css('background', $(".section4").attr("data-background"))
-    };
+    return new Promise(resolve=>{
+        if ($(document).scrollTop() >= $(".section1").position().top) {
+            state = 0;
+            $('.home-content').css('background', $(".section1").data("background"));
+        }
+        if ($(document).scrollTop() >= $(".section2").position().top) {
+            state = 1;
+            $('.home-content').css('background', $(".section2").data("background"));
+        }
+        if ($(document).scrollTop() >= $(".section3").position().top) {
+            state = 2;
+            $('.home-content').css('background', $(".section3").data("background"));
+        }
+        if ($(document).scrollTop() >= $(".section4").position().top) {
+            state = 3;
+            $('.home-content').css('background', $(".section4").data("background"));
+        }
+        resolve();
+    });
 };
 
 
