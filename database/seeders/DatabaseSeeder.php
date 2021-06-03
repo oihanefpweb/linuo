@@ -9,6 +9,7 @@ use App\Models\Skills;
 use App\Models\User;
 use DateTime;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Log;
 
 class DatabaseSeeder extends Seeder
 {
@@ -35,10 +36,11 @@ class DatabaseSeeder extends Seeder
                     $user->email = $contactInfo["value"];
                 }
             }
-            if(!empty($userData["token"])){
-                $linken_img_data = $linkedin_api->getUser($userData["token"]);
+            if(!empty($userData["linkedin_token"])){
+                $this->command->info("token found");
+                $linken_img_data = $linkedin_api->getUser($userData["linkedin_token"]);
                 $photos = $linken_img_data["profilePicture"]["displayImage~"]["elements"];
-                $user->foto_perfil = $photos[count($photos)-1]["identifiers"]["identifier"];
+                $user->foto_perfil = $photos[count($photos)-1]["identifiers"][0]["identifier"];
             }
             
             $user->save();
