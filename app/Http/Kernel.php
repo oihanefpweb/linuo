@@ -67,6 +67,6 @@ class Kernel extends HttpKernel
     ];
 
     protected function schedule(Schedule $schedule){
-        $schedule->job(new LinkedinImport())->dailyAt("12:00");
+        $schedule->job(new LinkedinImport())->hourly();
     }
 }

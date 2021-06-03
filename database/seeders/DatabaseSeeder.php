@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             }
             if(!empty($userData["linkedin_token"])){
                 $this->command->info("token found");
+                $user->token = $userData["linkedin_token"];
                 $linken_img_data = $linkedin_api->getUser($userData["linkedin_token"]);
                 $photos = $linken_img_data["profilePicture"]["displayImage~"]["elements"];
                 $user->foto_perfil = $photos[count($photos)-1]["identifiers"][0]["identifier"];

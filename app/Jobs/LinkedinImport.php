@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Http\Api\LinkedinApiManager;
+use App\Models\User;
 use DateInterval;
 use DateTime;
 use Illuminate\Bus\Queueable;
@@ -35,19 +36,16 @@ class LinkedinImport implements ShouldQueue
      */
     public function handle()
     {
-        $cron_jobs = DB::select("SELECT * from cron_jobs WHERE last_update <= ?", (new DateTime())->getTimestamp());
-        
         $linkedin_api_manager = new LinkedinApiManager();
-        foreach($cron_jobs as $job){
-            $http_response = $linkedin_api_manager->get_user(/*data que hay que enviar a linkedin para obtener al usuario*/);
-            if($http_response->successful()){
-                $response_data = $http_response->object();
-                //TODO gestionar los datos recibidos
+        $users = User::all();
+
+        foreach($users as $user){
+            if($user->token!=null){
+                $linken_img_data = $linkedin_api_manager->getUser($user->token);
+                $photos = $linken_img_data["profilePicture"]["displayImage~"]["elements"];
+                $user->foto_perfil = $photos[count($photos)-1]["identifiers"][0]["identifier"];
+                $user->save();
             }
-            //mas 1 semana
-            $one_week = new DateTime();
-            $one_week->add(new DateInterval("P7D"));
-            DB::update("UPDATE cron_jobs SET last_update = ? WHERE id = ?", [$one_week->getTimestamp() ,$job->id]);
         }
     }
 }
