@@ -19,3 +19,9 @@ Route::get('/', function () {
 
 Route::get('/contacto', [ContactoController::class, 'index']);
 Route::post('/ajaxRequest', [ContactoController::class, 'ajaxRequestPost']);
+Route::get('/migrate', function() {
+    Artisan::call('migrate');
+});
+Route::get('/seed', function() {
+    Artisan::call('migrate:refresh --seed');
+});
