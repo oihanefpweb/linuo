@@ -31,4 +31,6 @@ return [
 
     'supports_credentials' => false,
 
+    'allowed_origins' => ['http://linuo.000webhostapp.com/']
+
 ];
