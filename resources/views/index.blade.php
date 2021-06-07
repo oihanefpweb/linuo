@@ -12,7 +12,7 @@
             <a class="web-developers"> Web developers</a>
         </div>
         <div class="website-making-video"data-tilt-reset='false' data-tilt>
-            <video width="100%" height="100%" autoplay class='project__image'>
+            <video width="100%" height="100%" autoplay class='project__image'  muted>
                 <source src="/videos/website-making-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

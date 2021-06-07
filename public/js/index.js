@@ -1,6 +1,4 @@
 $(function() {
-    var lastState = 1;
-    var state = 0;
     var slogan_count = 0;
     var coding_count = 1;
     var web_video_count = 1;
@@ -15,7 +13,7 @@ $(function() {
                 url = '/images/index/design.jpg'
                 break;
             case 2:
-                url = '/images/index/programming.png'
+                url = '/images/index/codigo.png'
                 break;
             case 3:
                 url = '/images/index/testing.png'
@@ -51,29 +49,6 @@ $(function() {
     
     function items_animations(y){
         var  total_page = $(document).height() - $(window).height()
-        
-        /*  if(lastState != state){
-            disableAll();
-            setTimeout(()=>{
-                switch(state){
-                    case 0:
-                        activate(state+1);
-                        $('.slogan').typeIt();
-                        break;
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3: 
-                        break;
-                }
-                lastState = state;
-            }, 500);
-            lastState = state;
-        } */
-        
-        //scrollPercent = Math.round(100 * $(window).scrollTop() / ($(document).height() - $(window).height()));
-
         if(y < (total_page* 0.174)){
             if(slogan_count == 1){
                 $('.slogan-content').toggle(1000);
@@ -131,7 +106,7 @@ $(function() {
                     $(" #bubble-section").show(500);
                     $(".contact-us").show(500);
                     $(".contact-us").animate({
-                        fontSize: "4rem"
+                        fontSize: "3rem"
                     }, 1000);
                 }else{
                     $(" #bubble-section").show(500);

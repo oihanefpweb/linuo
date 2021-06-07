@@ -15,7 +15,7 @@
 }
 .slogan{
   width: 100%;
-  font-size: 9rem;
+  font-size: 6rem;
   position: fixed;
   margin-top: 30vh;
   text-align: center;
@@ -50,7 +50,7 @@
 }
 .web-developers-content{
   width: 70%;
-  font-size: 7rem;
+  font-size: 5rem;
   position: absolute;
   margin-top: 70%;
   left: 0;
@@ -95,23 +95,28 @@
   z-index: 12; 
   background-color: transparent;
   height: 100vh;
+  display: flex;
 }
 .actions{
   padding: 0% 5%;
-  width: 100%;
+  width: 80%;
   height: 60%;
   text-align: center;
   font-family: 'organo';
-  font-size: 5rem;
+  font-size: 2.75rem;
   font-variant-caps: small-caps;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto ;
-  grid-template-areas: 
-  'design programming'
-  'testing testing '
-  'coding functionality'
-  ;
+  grid-template-rows: auto;
+  grid-template-areas:
+      'design programming'
+      'testing testing '
+      'coding functionality';
+  /* gap: 0% 0%; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+
 }
 .floating{
   display: none;
@@ -192,6 +197,7 @@
   font-weight: bold;
   font-family: comfortaa;
   font-size: 0.5rem;
+  text-decoration: none;
 }
 
 #bubble-section{
@@ -263,7 +269,7 @@
     font-size: 1rem
   }
   .slogan{
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 

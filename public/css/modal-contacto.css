@@ -12,13 +12,16 @@
 }
 .modal{
     width: auto;
+    max-height: 450px;
     height: 60%;
+    max-width: 700px;
     margin: auto;
     background-color: rgba(48, 10, 36, 0.788);
     display: none;
     position: relative;
-    border-top-left-radius:    10px;
-    border-top-right-radius:    10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 15px;
 }
 .modal-header{
     background-color: #434343c4;
@@ -44,9 +47,14 @@
     display: flex;
     border-radius: 100px;
     cursor: pointer;
+    
+}
+.modal-close:active {
+    transform: scale(0.9);
 }
 .modal-close a {
     margin: auto;
+    font-weight: bolder;
 }
 .table-title{
     color:#008000
@@ -65,4 +73,37 @@ td:nth-child(odd){
 }
 tr{
     height: 35px;
+}
+hr{
+    border: 2px solid rgba(0, 0, 0, 0.205);
+}
+@media only screen and (max-width:400px) {
+    .modal{
+        font-size: 0.7rem;
+        width: 90%;
+    }
+}
+
+/* Scrollbar style */
+/* width */
+.modal-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.modal-body::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+margin-bottom: 10px;
+}
+
+/* Handle */
+.modal-body::-webkit-scrollbar-thumb {
+background: rgba(138, 89, 122, 0.788); 
+border-radius: 15px;
+}
+
+/* Handle on hover */
+.modal-body::-webkit-scrollbar-thumb:hover {
+background: rgba(100, 60, 87, 0.788); 
 }

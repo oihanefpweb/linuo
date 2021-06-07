@@ -10,20 +10,25 @@
     display: flex;
     margin: auto;
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     position: relative;
     border: solid white 2px ;
     color: rgba(255, 255, 255, 0.726);
+    cursor: pointer;
+    background-size: 250px 250px !important;
     
 }
 .contact_name{
     margin: auto;
-    font-size: 5rem;
     text-transform: capitalize;
+    font-size: 3rem;
+}
+.contact-content div:hover > .contact_name{
+    font-size: 3.5rem;
 }
 
 /* BG MOVEMENT */
@@ -53,6 +58,39 @@ body {
 .bg3 {
     animation-duration:5s;
 }
+@media only screen and (max-width:600px) and (min-width: 401px) {
+    .contact-content div{
+        width: 150px;
+        height: 150px;
+        background-size:150px !important
+    }
+    .contact_name{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width:400px) {
+    .contact-content{
+        flex-direction: column;
+        margin-top: 35%;
+        height: 60vh;
+        
+    }
+    .contact_name{
+        font-size: 2rem;
+    }
+    .contact_name:active{
+        transform: scale(0.8);
+    }
+    .contact-content div{
+        width: 150px;
+        height: 150px;
+        background-size:150px !important
+    }
+    .contact-content div:hover > .contact_name{
+        font-size: 1.5rem;
+    }
+}
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;

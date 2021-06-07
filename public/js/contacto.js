@@ -2,16 +2,12 @@ $(function(){
     $('.modal-close').on('click', function () {
         $('.modal').hide();
         $('.modal-bg').hide();
-        
-
     })
     $('.contacto').on('click', function (e) {
         e.preventDefault();
         $('.modal-body').html('')
         getUserInfo(this.id);
-       
     })
-
     function getUserInfo (id) {
         /* La ruta hay que ponerla asi en laravel 8 {{route('ajax...')}} no funciona si esta en un js externo */
 
@@ -31,7 +27,7 @@ $(function(){
                     var table = $('<table/>'), 
                         tbody= $('<tbody/>'),
                         span = $('<span/>').addClass('table-title').text(data[index].title),
-                        space = '<br>',
+                        space = '<hr colspan="2">',
                         row_content = "";
                     for(let index2 = 0; index2 < data[index].info_data.length; index2++) {
                         
@@ -90,4 +86,5 @@ $(function(){
         return mes + ' '+ year;
 
     }
+  
 })
