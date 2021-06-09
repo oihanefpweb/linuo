@@ -15,6 +15,8 @@
         <link href="{{ asset('css/burbujas.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('css/modal-contacto.css') }}" rel="stylesheet" type="text/css">
 
+        <!-- Logo -->
+        <link rel="icon" href="{{asset('images/logo/favicon.ico')}}" sizes="196x196" type="image/png" />
     </head>
     <body>
         <header>
@@ -39,8 +41,8 @@
         
         <!-- JS (jquery and bootstrap)-->
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="//cdn.jsdelivr.net/jquery.typeit/3.0.1/typeit.min.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="/js/contacto.js" ></script>
 
 

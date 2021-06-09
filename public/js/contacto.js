@@ -27,7 +27,6 @@ $(function(){
                     var table = $('<table/>'), 
                         tbody= $('<tbody/>'),
                         span = $('<span/>').addClass('table-title').text(data[index].title),
-                        space = '<hr colspan="2">',
                         row_content = "";
                     for(let index2 = 0; index2 < data[index].info_data.length; index2++) {
                         
@@ -42,14 +41,18 @@ $(function(){
                                     else if(key == 'fecha inicio' || key == 'fecha fin'){
                                         row_content = '<tr><td class="info title">'+key+'</td><td class="info">'+getDate(val)+'</td></tr>';
                                     }
+                                    else if(key == 'puesto'){
+                                        row_content = '<tr></tr><tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
+                                    }
                                     else{
                                         row_content = '<tr><td class="info">'+key+'</td><td class="info">'+val+'</td></tr>';
-                                    }
+                                    }                                  
+                                    
                                     if(row_content!="") tbody.append(row_content);
                                 }
                             });
                         if(data[index].title == 'estudies@info'){
-                            tbody.append(space)
+                            tbody.append('<tr></tr>')
                         }
                     }
                     table.append(span),
